@@ -3,7 +3,7 @@ import {
     StyleSheet,
     Text,
     Dimensions,
-    TouchableHighlight
+    TouchableHighlight,
 } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -28,6 +28,9 @@ const styles = StyleSheet.create({
     buttonTriple: {
         width: (Dimensions.get('window').width / 4) * 3
     },
+    highlight: {
+        borderRadius: 10,
+    }
 })
 
 export default props => {
@@ -36,7 +39,7 @@ export default props => {
     if (props.triple) stylesButton.push(styles.buttonTriple)
     if (props.operation) stylesButton.push(styles.operationButton)
     return (
-        <TouchableHighlight onPress={() => props.onClick(props.label)}>
+        <TouchableHighlight style={styles.highlight} onPress={() => props.onClick(props.label)}>
             <Text style={stylesButton}>{props.label}</Text>
         </TouchableHighlight>
     )

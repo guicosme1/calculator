@@ -1,7 +1,0 @@
-* text=auto
-
-*.css diff=css
-*.js diff=js
-
-/.github export-ignore
-CHANGELOG.md export-ignore
